@@ -1,0 +1,12 @@
+<h1>New Artist Form</h1>
+
+<%= form_tag artists_path do %>
+  <label>Artist Name:</label>
+  <%= text_field_tag :"artist[name]" %><br>
+
+  <label>Artist Bio:</label>
+  <%= text_field_tag :"artist[bio]" %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%= submit_tag "Create Artist" %>
+<% end %>

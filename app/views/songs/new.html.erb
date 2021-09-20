@@ -1,0 +1,15 @@
+<h1>New Song Form</h1>
+
+<%= form_tag songs_path do %>
+  <label>Song Name:</label>
+  <%= text_field_tag :"song[name]" %><br>
+
+  <label>Song Artist:</label>
+  <%= text_field_tag :"song[artist_id]" %><br>
+
+    <label>Song Genre:</label>
+  <%= text_field_tag :"song[genre_id]" %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%= submit_tag "Create Song" %>
+<% end %>

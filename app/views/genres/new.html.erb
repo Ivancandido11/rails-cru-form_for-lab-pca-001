@@ -1,0 +1,9 @@
+<h1>New Genre Form</h1>
+
+<%= form_tag genres_path do %>
+  <label>Genre Name:</label>
+  <%= text_field_tag :"genre[name]" %><br>
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <%= submit_tag "Create Genre" %>
+<% end %>
